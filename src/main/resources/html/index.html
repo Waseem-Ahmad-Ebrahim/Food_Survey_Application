@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/validateForm.js" defer></script>
+</head>
+<body>
+
+<div class="navbar">
+    <span class="nav"><b>_Surveys</b></span>
+    <a href="survey_results.html" class="right">VIEW SURVEY RESULTS</a>
+    <a href="index.html" class="right active">FILL OUT SURVEY</a>
+</div>
+
+<form method="post" onsubmit="return validateForm()">
+
+    <div class="personal-details">
+        <fieldset>
+            <label class="personal-details-label">Personal Details: </label>
+            <label for="fullNames">Full Names</label><br>
+            <input type="text" id="fullNames" name="fullNames" autofocus required><br><br>
+
+            <label for="email" class="input-label">Email</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="DOB" class="input-label">Date of Birth</label><br>
+            <input type="date" id="DOB" name="DOB" style="width: 172px; height: 18px;" required><br><br>
+
+            <label for="contactNumb" class="input-label">Contact Number</label><br>
+            <input type="tel" id="contactNumb" name="contactNumb" required><br><br>
+        </fieldset>
+    </div>
+
+    <div class="favorite-food">
+        <fieldset>
+            <label class="favorite-food-label">What is your favorite food?</label>
+            <input type="checkbox" id="pizza" name="food" value="Pizza">
+            <label for="pizza" class="food-label">Pizza</label>
+            <input type="checkbox" id="pasta" name="food" value="Pasta">
+            <label for="pasta" class="food-label">Pasta</label>
+            <input type="checkbox" id="pap" name="food" value="Pap and Wors">
+            <label for="pap" class="food-label">Pap and Wors</label>
+            <input type="checkbox" id="other" name="food" value="Other">
+            <label for="other" class="food-label">Other</label>
+        </fieldset><br><br>
+    </div>
+
+    <fieldset>
+    <legend class="ratings">Please rate your level of agreement on a scale from 1 to 5, with 1 being "strongly agree" and 5 being "strongly disagree."</legend>
+        <table class="survey-table">
+            <thead>
+            <tr>
+                <th></th>
+                <th>Strongly Agree</th>
+                <th>Agree</th>
+                <th>Neutral</th>
+                <th>Disagree</th>
+                <th>Strongly Disagree</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>I like to watch movies</td>
+                <td><input type="radio" name="movies" value="1"></td>
+                <td><input type="radio" name="movies" value="2"></td>
+                <td><input type="radio" name="movies" value="3"></td>
+                <td><input type="radio" name="movies" value="4"></td>
+                <td><input type="radio" name="movies" value="5"></td>
+            </tr>
+            <tr>
+                <td>I like to listen to radio</td>
+                <td><input type="radio" name="radio" value="1"></td>
+                <td><input type="radio" name="radio" value="2"></td>
+                <td><input type="radio" name="radio" value="3"></td>
+                <td><input type="radio" name="radio" value="4"></td>
+                <td><input type="radio" name="radio" value="5"></td>
+            </tr>
+            <tr>
+                <td>I like to eat out</td>
+                <td><input type="radio" name="eat_out" value="1"></td>
+                <td><input type="radio" name="eat_out" value="2"></td>
+                <td><input type="radio" name="eat_out" value="3"></td>
+                <td><input type="radio" name="eat_out" value="4"></td>
+                <td><input type="radio" name="eat_out" value="5"></td>
+            </tr>
+            <tr>
+                <td>I like to watch TV</td>
+                <td><input type="radio" name="watch_tv" value="1"></td>
+                <td><input type="radio" name="watch_tv" value="2"></td>
+                <td><input type="radio" name="watch_tv" value="3"></td>
+                <td><input type="radio" name="watch_tv" value="4"></td>
+                <td><input type="radio" name="watch_tv" value="5"></td>
+            </tr>
+            </tbody>
+        </table>
+    </fieldset>
+
+    <button formaction="/saveData">SUBMIT</button>
+</form>
+
+</body>
+</html>

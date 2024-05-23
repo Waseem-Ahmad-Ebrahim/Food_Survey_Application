@@ -1,0 +1,181 @@
+body {
+  font-family: Sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  padding-left: 50px;
+  padding-right: 160px;
+  padding-bottom: 50px;
+}
+
+.navbar a {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 17px;
+  color: black;
+}
+
+.navbar a.right {
+  float: right;
+}
+
+.navbar a.active {
+  color: #00BFFF;
+}
+
+.nav {
+  display: inline-block;
+  padding: 14px 20px;
+}
+
+fieldset {
+  border: none;
+}
+
+input {
+  border:1px solid #00BFFF;
+}
+
+.personal-details-label {
+  margin-left: 80px;
+  padding-right: 105px;
+}
+
+.personal-details input {
+  margin-left: 20%;
+}
+
+.input-label {
+  margin-left: 20%
+}
+
+.favorite-food-label {
+  margin-left: 80px;
+  padding-right: 35px
+}
+
+.food-label {
+  padding-right: 10px;
+}
+
+.ratings {
+  margin-left: 80px;
+}
+
+.survey-table {
+  border-collapse: collapse;
+  width: 65%;
+  margin-left: 80px;
+}
+
+.survey-table th, .survey-table td {
+  border: 1px solid #00BFFF;
+  text-align: center;
+  padding: 8px;
+  width: 16%;
+}
+
+.survey-table th {
+  background-color: #f2f2f2;
+  border-color: black;
+  background-color: lightgrey;
+}
+
+.survey-table th:first-child,
+.survey-table td:first-child {
+  width: 20%;
+  text-align: left;
+}
+
+:root {
+  --checkbox-border-color: #00BFFF;
+  --checkbox-checked-color: #4169E1;
+  --checkbox-hover-color: #a3cef1;
+  --checkbox-disabled-bg-color: #d9d9d9;
+  --radio-border-color: #00BFFF;
+  --radio-checked-color: #4169E1;
+}
+
+input[type="checkbox"] {
+  box-sizing: border-box;
+  width: 15px;
+  height: 15px;
+  margin: 0px;
+  padding: 0;
+  border: 1px solid var(--checkbox-border-color);
+  appearance: none;
+  background-color: transparent;
+  outline: none;
+  transition: outline 0.1s;
+}
+
+input[type="checkbox"]:checked {
+  background-size: cover;
+  padding: 2px;
+}
+
+input[type="checkbox"]:not(:disabled):checked {
+  border-color: var(--checkbox-checked-color);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 32 32" xml:space="preserve"><path style="fill: %23274c77" d="M11.941,28.877l-11.941-11.942l5.695-5.696l6.246,6.246l14.364-14.364L32,8.818"/></svg>');
+}
+
+input[type="checkbox"]:disabled {
+  background-color: var(--checkbox-disabled-bg-color);
+}
+
+input[type="checkbox"]:disabled:checked {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 32 32" xml:space="preserve"><path style="fill: %238b8c89" d="M11.941,28.877l-11.941-11.942l5.695-5.696l6.246,6.246l14.364-14.364L32,8.818"/></svg>');
+}
+
+input[type="radio"] {
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+  margin: 0px;
+  padding: 0;
+  border: 1px solid var(--radio-border-color);
+  border-radius: 50%;
+  appearance: none;
+  background-color: transparent;
+  outline: none;
+}
+
+input[type="radio"]:not(:disabled):checked {
+  border-color: var(--radio-checked-color);
+  background-color: var(--radio-checked-color);
+  background-clip: content-box;
+  padding: 2px;
+  background-image: radial-gradient(
+    circle,
+    var(--radio-checked-color) 0%,
+    var(--radio-checked-color) 50%,
+    transparent 60%,
+    transparent 100%
+  );
+}
+
+input[type="radio"]:disabled:checked {
+  background-image: radial-gradient(
+    circle,
+    var(--radio-border-color) 0%,
+    var(--radio-border-color) 50%,
+    transparent 50%,
+    transparent 100%
+  );
+}
+
+button {
+  border: none;
+  background-color: #00BFFF;
+  color: white;
+  width: 100px;
+  height: 30px;
+  margin-left: 36%;
+  margin-top: 15px;
+}
+
+
+

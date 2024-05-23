@@ -1,0 +1,35 @@
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.results-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.results-table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.results-table td {
+  padding: 10px 120px;
+}
+
+.label-cell {
+  text-align: left;
+  padding-right: 50px;
+  width: 400px;
+}
+
+.result-cell {
+  text-align: left;
+  padding-left: 50px;
+  width: 150px;
+}
+
+.blank_row {
+  height: 20px;
+}

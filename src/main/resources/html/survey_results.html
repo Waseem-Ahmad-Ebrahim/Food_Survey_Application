@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Results</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/resultsPageStyling.css">
+</head>
+<body>
+<div class="navbar">
+    <span class="nav"><b>_Surveys</b></span>
+    <a href="survey_results.html" class="right active">VIEW SURVEY RESULTS</a>
+    <a href="index.html" class="right">FILL OUT SURVEY</a>
+</div>
+
+<h1>Survey Results</h1>
+<div class="results-container" th:if="${not noSurveys}">
+    <table class="results-table">
+        <tr>
+            <td class="label-cell">Total number of surveys:</td>
+            <td class="result-cell"><span th:text="${totalSurveys}"></span></td>
+        </tr>
+        <tr>
+            <td class="label-cell">Average age:</td>
+            <td class="result-cell"><span th:text="${avgAge}"></span></td>
+        </tr>
+        <tr>
+            <td class="label-cell">Oldest person that participated in the survey:</td>
+            <td class="result-cell"><span th:text="${oldestAge}"></span></td>
+        </tr>
+        <tr>
+            <td class="label-cell">Youngest person that participated in the survey:</td>
+            <td class="result-cell"><span th:text="${youngestAge}"></span></td>
+        </tr>
+        <tr class="blank_row"></tr>
+        <tr>
+            <td class="label-cell">Percentage of people who like pizza:</td>
+            <td class="result-cell"><span th:text="${percentPizza}"></span>%</td>
+        </tr>
+        <tr>
+            <td class="label-cell">Percentage of people who like pasta:</td>
+            <td class="result-cell"><span th:text="${percentPasta}"></span>%</td>
+        </tr>
+        <tr>
+            <td class="label-cell">Percentage of people who like Pap and Wors:</td>
+            <td class="result-cell"><span th:text="${percentPapAndWors}"></span>%</td>
+        </tr>
+        <tr class="blank_row"></tr>
+        <tr>
+            <td class="label-cell">Average rating of people who like to watch movies:</td>
+            <td class="result-cell"><span th:text="${avgMoviesRating}"></span></td>
+        </tr>
+        <tr>
+            <td class="label-cell">Average rating of people who like to listen to radio:</td>
+            <td class="result-cell"><span th:text="${avgRadioRating}"></span></td>
+        </tr>
+        <tr>
+            <td class="label-cell">Average rating of people who like to eat out:</td>
+            <td class="result-cell"><span th:text="${avgEatOutRating}"></span></td>
+        </tr>
+        <tr>
+            <td class="label-cell">Average rating of people who like to watch TV:</td>
+            <td class="result-cell"><span th:text="${avgWatchTvRating}"></span></td>
+        </tr>
+    </table>
+</div>
+
+<div th:if="${noSurveys}">
+    <p>No survey results available</p>
+</div>
+</body>
+</html>
