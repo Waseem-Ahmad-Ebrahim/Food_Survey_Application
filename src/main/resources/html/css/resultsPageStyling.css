@@ -33,3 +33,7 @@ h1 {
 .blank_row {
   height: 20px;
 }
+
+.no-surveys {
+  text-align: center;
+}
