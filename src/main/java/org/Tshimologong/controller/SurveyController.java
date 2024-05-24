@@ -20,10 +20,10 @@ public class SurveyController {
                 String dob = ctx.formParam("DOB");
                 String contactNumb = ctx.formParam("contactNumb");
                 String[] foods = ctx.formParams("food").toArray(new String[0]);
-                int moviesRating = Integer.parseInt(ctx.formParam("movies"));
-                int radioRating = Integer.parseInt(ctx.formParam("radio"));
-                int eatOutRating = Integer.parseInt(ctx.formParam("eat_out"));
-                int watchTvRating = Integer.parseInt(ctx.formParam("watch_tv"));
+                int moviesRating = Integer.parseInt(Objects.requireNonNull(ctx.formParam("movies")));
+                int radioRating = Integer.parseInt(Objects.requireNonNull(ctx.formParam("radio")));
+                int eatOutRating = Integer.parseInt(Objects.requireNonNull(ctx.formParam("eat_out")));
+                int watchTvRating = Integer.parseInt(Objects.requireNonNull(ctx.formParam("watch_tv")));
 
                 surveyService.saveSurveyData(fullNames, email, dob, contactNumb, foods, moviesRating, radioRating, eatOutRating, watchTvRating);
                 ctx.redirect("/index.html");
