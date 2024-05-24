@@ -1,5 +1,5 @@
 function validateForm() {
-    if (!validateTextFields() || !validateAge() || !validateCheckboxes()) || !validateRatings() {
+    if (!validateTextFields() || !validateAge() || !validateRatings() || !validateCheckboxes()) {
         return false;
     }
     return true;
